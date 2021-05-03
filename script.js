@@ -1,5 +1,6 @@
 const text = document.querySelector('.quote');
 const auth = document.querySelector('.author');
+const tesd = document.querySelector('.tesd');
 const button = document.querySelector('.twitter-share-button');
 const nextBtn = document.querySelector('.next');
 const loader = document.querySelector('.loader');
@@ -13,9 +14,11 @@ const getQuote = async () => {
     const item = quotes[num];
     const quote = item.text;
     const author = item.author;
+    const tesd = item.image;
     text.innerText = quote;
     auth.innerText = author;
-    button.href = `whatsapp://send?text=${quote} - ${author}`
+    tesd.innerText = tesd;
+    button.href = `whatsapp://send?text=${quote} - ${author} - ${tesd}`
 }
 
 nextBtn.addEventListener('click', getQuote);
